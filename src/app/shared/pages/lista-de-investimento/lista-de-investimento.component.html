@@ -1,0 +1,26 @@
+<div>
+  <h1>Lista de Investimentos</h1>
+</div>
+
+<div class="card">
+  <p-table [value]="investimentos" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Nome</th>
+              <th>Objetivo</th>
+              <th>Saldo Total</th>
+              <th style="width: 5rem"></th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+          <tr>
+              <td>{{ product.nome }}</td>
+              <td>{{ product.objetivo }}</td>
+              <td>{{ product.saldoTotal }}</td>
+              <td>
+                <button type="button" pButton pRipple icon="pi pi-plus" (click)="resgatarInvestimento($event)"></button>
+            </td>
+          </tr>
+      </ng-template>
+  </p-table>
+</div>
