@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-lista-de-investimento',
   templateUrl: './lista-de-investimento.component.html',
-  styleUrls: ['./lista-de-investimento.component.css']
+  styleUrls: ['./lista-de-investimento.component.scss']
 })
 export class ListaDeInvestimentoComponent implements OnInit {
 
@@ -29,8 +29,8 @@ export class ListaDeInvestimentoComponent implements OnInit {
     );
   }
 
-  resgatarInvestimento(event: any){
-    this.router.navigate(['/resgate-personalizado']);
+  resgatarInvestimento(nomeInvestimento: string){
+    this.router.navigate(['/resgate-personalizado'], { queryParams: { nomeInvestimento: nomeInvestimento } });
   }
 
 }

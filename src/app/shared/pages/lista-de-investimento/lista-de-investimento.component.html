@@ -18,7 +18,7 @@
               <td>{{ product.objetivo }}</td>
               <td>{{ product.saldoTotal }}</td>
               <td>
-                <button type="button" pButton pRipple icon="pi pi-plus" (click)="resgatarInvestimento($event)"></button>
+                <button type="button" pButton pRipple icon="pi pi-arrow-down" (click)="resgatarInvestimento(product.nome)"></button>
             </td>
           </tr>
       </ng-template>

@@ -8,6 +8,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { ResgatePersonalizadoComponent } from './pages/resgate-personalizado/resgate-personalizado.component';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { TableModule } from 'primeng/table';
+import { CardModule } from 'primeng/card';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { RealBrasilMaskDirective } from './util/regex-money.directive';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'lista-de-investimento', component: ListaDeInvestimentoComponent },
@@ -21,18 +27,24 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes),
     TabMenuModule,
-    TableModule
+    TableModule,
+    CardModule,
+    InputTextModule,
+    ButtonModule,
+    InputNumberModule,
   ],
   exports: [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
   ],
   declarations: [
     HomeComponent,
     ListaDeInvestimentoComponent,
-    ResgatePersonalizadoComponent
+    ResgatePersonalizadoComponent,
+    RealBrasilMaskDirective
+
   ],
 })
 export class SharedModule { }
