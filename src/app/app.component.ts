@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'resgate-invest';
+  value: any;
+  visible: boolean = false
 }

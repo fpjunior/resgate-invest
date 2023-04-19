@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { BrowserModule } from "@angular/platform-browser";
 import { SharedModule } from './shared/shared.module';
-
+import { InputTextModule } from 'primeng/inputtext';
+import { TabMenuModule } from 'primeng/tabmenu';
 @NgModule({
   declarations: [
     AppComponent
@@ -16,6 +17,9 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    InputTextModule,
+    TabMenuModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
